@@ -2,16 +2,15 @@
 
 Name:           python-%{srcname}
 Version:        0.1.36
-Release:        %autorelease
+Release:        1
 Summary:        Multi-Language GL/GLES/EGL/GLX/WGL Loader-Generator
-
 # Mostly MIT, ASL 2.0 for Khronos and EGL specifications/headers.
 License:        MIT and ASL 2.0
 URL:            https://github.com/Dav1dde/glad
-Source0:        %pypi_source
+Source0:        https://files.pythonhosted.org/packages/source/g/glad/glad-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  python3-devel
+BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
 
 %description
