@@ -12,6 +12,7 @@ BuildArch:      noarch
 
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
+Requires:       python3dist(setuptools)
 
 %description
 Glad uses the official Khronos-XML specs to generate a GL/GLES/EGL/GLX/WGL
@@ -27,18 +28,6 @@ Requires:       python3dist(glad)
 Glad uses the official Khronos-XML specs to generate a GL/GLES/EGL/GLX/WGL
 Loader made for your needs.
 
-
-%package -n     python3-%{srcname}
-Summary:        %{summary}
-%{?python_provide:%python_provide python3-%{srcname}}
-
-Requires:       python3dist(setuptools)
-
-%description -n python3-%{srcname}
-Glad uses the official Khronos-XML specs to generate a GL/GLES/EGL/GLX/WGL
-Loader made for your needs.
-
-
 %prep
 %autosetup -n %{srcname}-%{version}
 
@@ -48,22 +37,15 @@ rm -rf %{srcname}.egg-info
 # Fix shebang
 sed -i -e '/^#!\//, 1d' %{srcname}/__main__.py
 
-
 %build
-%py3_build
-
+%py_build
 
 %install
-%py3_install
-
+%py_install
 
 %files -n %{srcname}
 %{_bindir}/glad
 
-%files -n python3-%{srcname}
-%{python3_sitelib}/%{srcname}
-%{python3_sitelib}/%{srcname}-%{version}-py%{python3_version}.egg-info
-
-
-%changelog
-%autochangelog
+%files
+%{python_sitelib}/%{srcname}
+%{python_sitelib}/%{srcname}-%{version}-py%{python_version}.egg-info
