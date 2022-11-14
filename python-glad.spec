@@ -48,4 +48,4 @@ sed -i -e '/^#!\//, 1d' %{srcname}/__main__.py
 
 %files
 %{python_sitelib}/%{srcname}
-%{python_sitelib}/%{srcname}-%{version}-py%{python_version}.egg-info
+#{python_sitelib}/%{srcname}-%{version}-py%{python_version}.egg-info
