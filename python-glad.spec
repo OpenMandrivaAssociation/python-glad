@@ -22,7 +22,7 @@ Loader made for your needs.
 %package -n     %{srcname}
 Summary:        %{summary}
 
-Requires:       python3dist(glad) = %{version}-%{release}
+Requires:       python-glad = %{version}-%{release}
 
 %description -n %{srcname}
 Glad uses the official Khronos-XML specs to generate a GL/GLES/EGL/GLX/WGL
