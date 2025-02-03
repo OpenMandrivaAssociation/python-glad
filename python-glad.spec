@@ -48,4 +48,4 @@ sed -i -e '/^#!\//, 1d' %{srcname}/__main__.py
 
 %files
 %{python_sitelib}/%{srcname}
-#{python_sitelib}/glad2-%{version}-py*.*.egg-info/
+%{python_sitelib}/glad2-2.0.8.dist-info
