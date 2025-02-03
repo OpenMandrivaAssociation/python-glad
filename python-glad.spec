@@ -1,7 +1,7 @@
 %global srcname glad
 
 Name:           python-%{srcname}
-Version:        2.0.7
+Version:        2.0.8
 Release:        1
 Summary:        Multi-Language GL/GLES/EGL/GLX/WGL Loader-Generator
 # Mostly MIT, ASL 2.0 for Khronos and EGL specifications/headers.
