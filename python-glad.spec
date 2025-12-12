@@ -2,7 +2,7 @@
 
 Name:           python-%{srcname}
 Version:        2.0.8
-Release:        1
+Release:        2
 Summary:        Multi-Language GL/GLES/EGL/GLX/WGL Loader-Generator
 # Mostly MIT, ASL 2.0 for Khronos and EGL specifications/headers.
 License:        MIT and ASL 2.0
