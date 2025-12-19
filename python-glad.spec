@@ -11,8 +11,9 @@ Source0:        https://github.com/Dav1dde/glad/archive/refs/tags/v%{version}/gl
 BuildArch:      noarch
 
 BuildRequires:  pkgconfig(python)
-BuildRequires:  python3dist(setuptools)
-Requires:       python3dist(setuptools)
+BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:  python%{pyver}dist(setuptools)
+Requires:       python%{pyver}dist(setuptools)
 
 %description
 Glad uses the official Khronos-XML specs to generate a GL/GLES/EGL/GLX/WGL
